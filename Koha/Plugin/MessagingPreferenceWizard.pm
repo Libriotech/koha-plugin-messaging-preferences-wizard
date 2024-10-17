@@ -96,7 +96,7 @@ sub tool {
 q|SELECT DISTINCT bo.borrowernumber, bo.categorycode FROM borrowers bo
 LEFT JOIN borrower_message_preferences mp USING (borrowernumber)
 WHERE 1|;
-        my $script_path = '../misc/maintenance/borrowers-force-messaging-defaults.pl';
+        my $script_path = '/usr/share/koha/bin/maintenance/borrowers-force-messaging-defaults.pl';
         my $command = "perl $script_path --doit";
         if ( $since ) {
             $command .= " --since $since";
